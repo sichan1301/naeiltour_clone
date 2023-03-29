@@ -3,7 +3,7 @@ import { menu, product } from './data/data';
 import Menu from "./components/menu";
 import './App.css';
 import { useState } from "react";
-
+import SubMenu from "./components/subMenu";
 
 const App = () => {
   const [productIdx,setProductIdx] = useState(0)
@@ -18,6 +18,7 @@ const App = () => {
         {product.map((product,productIdx )=> <CategoryText onMouseEnter={() =>{handleMouseEnter(productIdx)}}><a href={product.link}>{product.text}</a></CategoryText>)}
       </CategoryDiv>
       <Menu idx = {productIdx}/>
+      <SubMenu idx = {productIdx} />
     </AppSection>
   );
 }

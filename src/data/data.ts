@@ -237,114 +237,114 @@ export const menu:menuType[] = [
 ]
 
 
-export const subMenu = {
-  gold:[
+export const submenu = [
+  [
     {
-    title:"유럽｜지중해",
-    link:"www.~.com",
-    menu:[
-      {
-        subCategory:"서유럽",
-        subMenu:[
-          {
-            text:"프랑스",
-            link:"www.~.com"
-          },
-          {
-            text:"이탈리아",
-            link:"www.~.com"
-          },
-          {
-            text:"스위스",
-            link:"www.~.com"
-          },
-          {
-            text:"스페인｜포르투갈｜모로코",
-            link:"www.~.com"
-          },
-          {
-            text:"영국｜아릴랜드｜아이슬란드",
-            link:"www.~.com"
-          },
-          {
-            text:"독일",
-            link:"www.~.com"
-          },
-          {
-            text:"베네룩스",
-            link:"www.~.com"
-          },
-          {
-            text:"몰타",
+      title:"유럽｜지중해",
+      link:"www.~.com",
+      menu:[
+        {
+          subCategory:"서유럽",
+          subMenu:[
+            {
+              text:"프랑스",
+              link:"www.~.com"
+            },
+            {
+              text:"이탈리아",
+              link:"www.~.com"
+            },
+            {
+              text:"스위스",
+              link:"www.~.com"
+            },
+            {
+              text:"스페인｜포르투갈｜모로코",
+              link:"www.~.com"
+            },
+            {
+              text:"영국｜아릴랜드｜아이슬란드",
+              link:"www.~.com"
+            },
+            {
+              text:"독일",
+              link:"www.~.com"
+            },
+            {
+              text:"베네룩스",
+              link:"www.~.com"
+            },
+            {
+              text:"몰타",
+              link:"www.~.com"
+            }
+          ]
+        },
+        {
+          subCategory:"동유럽",
+          subMenu:[
+            {
+              text:"체코",
+              link:"www.~.com"
+            },
+            {
+              text:"오스트리아",
+              link:"www.~.com"
+            },
+            {
+              text:"폴란드｜헝가리｜슬로바키아",
+              link:"www.~.com"
+            },
+            {
+              text:"크로아티아｜슬로베니아",
+              link:"www.~.com"
+            },
+            {
+              text:"조지아｜보스니아｜불가리아루마니아｜마케도니아",
+              link:"www.~.com"
+            },
+          ]
+        },
+        {
+          subCategory:"북유럽",
+          subMenu:[{
+              text:"에스토니아 | 라트비아 리투아니아(발트3국)노르웨이｜스웨덴｜핀란드 덴마크｜페로제도",
+              link:"www.~.com"
+            }
+          ],
+          advertisement:{
+            text:"나.비.가 나는 비즈니스타고 가출한다",
             link:"www.~.com"
           }
-        ]
-      },
-      {
-        subCategory:"동유럽",
-        subMenu:[
-          {
-            text:"체코",
-            link:"www.~.com"
-          },
-          {
-            text:"오스트리아",
-            link:"www.~.com"
-          },
-          {
-            text:"폴란드｜헝가리｜슬로바키아",
-            link:"www.~.com"
-          },
-          {
-            text:"크로아티아｜슬로베니아",
-            link:"www.~.com"
-          },
-          {
-            text:"조지아｜보스니아｜불가리아루마니아｜마케도니아",
-            link:"www.~.com"
-          },
-        ]
-      },
-      {
-        subCategory:"북유럽",
-        subMenu:[{
-            text:"에스토니아 | 라트비아 리투아니아(발트3국)노르웨이｜스웨덴｜핀란드 덴마크｜페로제도",
-            link:"www.~.com"
+        },
+        {
+          subCategory:"지중해",
+          subMenu:[
+            {
+              text:"아테네｜산토리니｜그리스섬",
+              link:"www.~.com"
+            },
+            {
+              text:"튀르키예(터키)｜튀르키예와 유럽",
+              link:"www.~.com"
+            },          {
+              text:"신비의 나라 이집트",
+              link:"www.~.com"
+            },
+            {
+              text:"두바이｜아부다비｜도하",
+              link:"www.~.com"
+            }
+          ]
+        },
+        {
+          subCategory:"유럽 소도시 여행",
+          advertisement:{
+            text:"아기자기한 유럽 소도시! 렌터카를 이용한 편안한 가출!"
           }
-        ],
-        advertisement:{
-          text:"나.비.가 나는 비즈니스타고 가출한다",
-          link:"www.~.com"
         }
-      },
-      {
-        subCategory:"지중해",
-        subMenu:[
-          {
-            text:"아테네｜산토리니｜그리스섬",
-            link:"www.~.com"
-          },
-          {
-            text:"튀르키예(터키)｜튀르키예와 유럽",
-            link:"www.~.com"
-          },          {
-            text:"신비의 나라 이집트",
-            link:"www.~.com"
-          },
-          {
-            text:"두바이｜아부다비｜도하",
-            link:"www.~.com"
-          }
-        ]
-      },
-      {
-        subCategory:"유럽 소도시 여행",
-        advertisement:{
-          text:"아기자기한 유럽 소도시! 렌터카를 이용한 편안한 가출!"
-        }
-      }]
+      ]
     },
-
     {
       title:"일본",
       link:"www.~.com",
@@ -532,7 +532,7 @@ export const subMenu = {
       ]
     }
   ],
-  우리만:[
+  [
     {
       subCategory:"유럽",
       subMenu:[
@@ -622,7 +622,7 @@ export const subMenu = {
     }
   ]
   
-}
+]
 
 
 

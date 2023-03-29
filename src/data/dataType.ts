@@ -14,3 +14,7 @@ export type menuType = {
   link:string,
   menuCategory:textLinkType[]
 }
+
+export type subMenuType = {
+  
+}
