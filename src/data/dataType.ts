@@ -1,12 +1,12 @@
-type textLinkType ={
+export type textLinkType ={
   text:string,
   link:string
 }
 
 export type productType = {
+    type:EProductType,
     text:string,
     link:string
-    type?:string
   }
 
 export type menuType = {
@@ -15,21 +15,33 @@ export type menuType = {
   menuCategory:textLinkType[]
 }
 
+
+
+
+
 export type subMenuType = {
-  title?:string,
-  link?:string,
-  menu:{
+  type:EMenuType,
+  Menu:{
     subCategory:{
       text:string,
       link?:string
-    },
-    subMenu?:{
-      text:string,
-      link:string
     }[],
+    subMenu?:textLinkType[],
     advertisement?:{
       text:string,
       link?:string
-    }
+    },
   }[]
 }[]
+
+export enum EProductType {
+  gold,
+  package,
+  information
+}
+
+export enum EMenuType {
+  gold,
+  package,
+  information
+}

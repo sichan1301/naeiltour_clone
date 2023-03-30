@@ -3,22 +3,22 @@ import { menu, product } from './data/data';
 import Menu from "./components/menu";
 import './App.css';
 import { useState } from "react";
-import SubMenu from "./components/subMenu";
 
 const App = () => {
   const [productIdx,setProductIdx] = useState(0)
+  const [productType, setProductType] = useState(0)
 
-  const handleMouseEnter = (productIdx:number) =>{
-    productIdx < menu.length && setProductIdx(productIdx)
+  const handleMouseEnter = (productIdx:number,productType:number) =>{
+    productIdx < 6 && setProductIdx(productIdx)
+    setProductType(productType)
   }
 
   return ( 
     <AppSection>
       <CategoryDiv>
-        {product.map((product,productIdx )=> <CategoryText onMouseEnter={() =>{handleMouseEnter(productIdx)}}><a href={product.link}>{product.text}</a></CategoryText>)}
+        {product.map((product,productIdx )=> <CategoryText onMouseEnter={() =>{handleMouseEnter(productIdx,product.type)}}><a href={product.link}>{product.text}</a></CategoryText>)}
       </CategoryDiv>
-      <Menu idx = {productIdx}/>
-      <SubMenu idx = {productIdx} />
+      <Menu productIdx = {productIdx} productType ={productType}/>
     </AppSection>
   );
 }
@@ -26,7 +26,7 @@ const App = () => {
 export default App;
 
 const AppSection = styled.section`
-  width:75%;
+  width:90%;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ const CategoryDiv = styled.div`
 `
 
 const CategoryText = styled.button`
-  font-size:16px;
+  font-size:20px;
   margin:5px 10px;
   border:none;
   background:none;
