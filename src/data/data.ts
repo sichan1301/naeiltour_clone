@@ -1,4 +1,4 @@
-import { menuType, productType } from "./dataType"
+import { menuType, productType, subMenuType } from "./dataType"
 
 export const product:productType[] = [
   {
@@ -42,6 +42,8 @@ export const product:productType[] = [
   },
 ]
 
+
+//  Menu
 
 export const menu:menuType[] = [
   {
@@ -237,14 +239,17 @@ export const menu:menuType[] = [
 ]
 
 
-export const submenu = [
+//  subMenu
+export const submenu:subMenuType[] = [
   [
     {
       title:"유럽｜지중해",
       link:"www.~.com",
       menu:[
         {
-          subCategory:"서유럽",
+          subCategory:{
+            text:"서유럽"
+          },
           subMenu:[
             {
               text:"프랑스",
@@ -281,7 +286,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"동유럽",
+          subCategory:{
+            text:"동유럽"
+          },
           subMenu:[
             {
               text:"체코",
@@ -306,7 +313,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"북유럽",
+          subCategory:{
+            text:"북유럽"
+          },
           subMenu:[{
               text:"에스토니아 | 라트비아 리투아니아(발트3국)노르웨이｜스웨덴｜핀란드 덴마크｜페로제도",
               link:"www.~.com"
@@ -318,7 +327,9 @@ export const submenu = [
           }
         },
         {
-          subCategory:"지중해",
+          subCategory:{
+            text:"지중해"
+          },
           subMenu:[
             {
               text:"아테네｜산토리니｜그리스섬",
@@ -327,7 +338,8 @@ export const submenu = [
             {
               text:"튀르키예(터키)｜튀르키예와 유럽",
               link:"www.~.com"
-            },          {
+            },          
+            {
               text:"신비의 나라 이집트",
               link:"www.~.com"
             },
@@ -338,7 +350,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"유럽 소도시 여행",
+          subCategory:{
+            text:"유럽 소도시 여행"
+          },
           advertisement:{
             text:"아기자기한 유럽 소도시! 렌터카를 이용한 편안한 가출!"
           }
@@ -424,7 +438,9 @@ export const submenu = [
       link:"www.~.com",
       menu:[
         { 
-          subCategory:"베트남",
+          subCategory:{
+            text:"베트남"
+          },
           subMenu:[
             {
               text:"다낭ㅣ호이안",
@@ -445,7 +461,9 @@ export const submenu = [
           ]
         },
         { 
-          subCategory:"필리핀",
+          subCategory:{
+            text:"필리핀"
+          },
           subMenu:[
             {
               text:"세부｜보홀",
@@ -462,7 +480,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"태국",
+          subCategory:{
+            text:"태국"
+          },
           subMenu:[
             {
               text:"방콕 | 치앙마이 | 파타야",
@@ -483,7 +503,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"라오스/캄보디아",
+          subCategory:{
+            text:"라오스/캄보디아"
+          },
           subMenu:[
             {
               text:"비엔티안｜방비엥｜루앙프라방",
@@ -496,7 +518,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"싱가폴",
+          subCategory:{
+            text:"싱가폴"
+          },
           subMenu:[
             {
               text:"싱가폴(마리나베이｜클라키)",
@@ -513,7 +537,9 @@ export const submenu = [
           ]
         },
         {
-          subCategory:"인도네시아",
+          subCategory:{
+            text:"인도네시아"
+          },
           subMenu:[
             {
               text:"발리｜롬복",
@@ -534,89 +560,143 @@ export const submenu = [
   ],
   [
     {
-      subCategory:"유럽",
-      subMenu:[
+      menu:[
         {
-          text:"프리미엄 우리만",
-          link:"www.~.com"
-        },
-        {
-          text:"컴포트 우리만",
-          link:"www.~.com"
-        },
-        {
-          text:"테마 우리만",
-          link:"www.~.com"
+          subCategory:{
+            text:"유럽"
+          },
+          subMenu:[
+            {
+              text:"프리미엄 우리만",
+              link:"www.~.com"
+            },
+            {
+              text:"컴포트 우리만",
+              link:"www.~.com"
+            },
+            {
+              text:"테마 우리만",
+              link:"www.~.com"
+            }
+          ]
         }
       ]
     },
     {
-      subCategory:"일본",
-      subMenu:[
+      menu:[
         {
-          text:"도쿄 | 오사카 | 나고야",
-          link:"www.~.com"
-        },
-        {
-          text:"큐슈 | 홋카이도 | 오키나와 | 시코쿠",
-          link:"www.~.com"
+          subCategory: {
+            text:"일본"
+          },
+          subMenu:[
+            {
+              text:"도쿄 | 오사카 | 나고야",
+              link:"www.~.com"
+            },
+            {
+              text:"큐슈 | 홋카이도 | 오키나와 | 시코쿠",
+              link:"www.~.com"
+            }
+          ]
         }
       ]
     },
 
     {
-      subCategory:"괌 | 사이판 | 팔라우",
+      menu:[
+        {
+          subCategory:{
+            text:"괌 | 사이판 | 팔라우"
+          }
+        }
+      ]
     },
     {
-      subCategory:"미주 | 캐나다 | 중남미",
+      menu:[
+        {
+          subCategory:{
+            text:"미주 | 캐나다 | 중남미"
+          }
+        }
+      ]
     },
     {
-      subCategory:"호주 | 뉴질랜드",
+      menu:[
+        {
+          subCategory:{
+            text:"호주 | 뉴질랜드",
+          }
+        }
+      ]
     },
 
     {
-      subCategory:"동남아",
-      subMenu:[
+      menu:[
         {
-          text:"베트남 | 태국 | 미얀마 | 캄보디아",
-          link:"www.~.com"
-        },
-        {
-          text:"필리핀 | 싱가폴 | 말레이시아",
-          link:"www.~.com"
-        },          
-        {
-          text:"인도네시아",
-          link:"www.~.com"
+          subCategory:{
+            text:"동남아"
+          },
+          subMenu:[
+            {
+              text:"베트남 | 태국 | 미얀마 | 캄보디아",
+              link:"www.~.com"
+            },
+            {
+              text:"필리핀 | 싱가폴 | 말레이시아",
+              link:"www.~.com"
+            },          
+            {
+              text:"인도네시아",
+              link:"www.~.com"
+            }
+          ]
         }
       ]
     },
     {
-      subCategory:"홍콩 | 마카오 | 대만",
-    },
-    {
-      subCategory:"대만(타이완)",
-      subMenu:[
+      menu:[
         {
-          text:"가족테마 | 온천 | 트레킹",
-          link:"www.~.com"
-        },
-        {
-          text:"택시투어 | 모임여행",
-          link:"www.~.com"
+          subCategory:{
+            text:"홍콩 | 마카오 | 대만"
+          }
         }
       ]
     },
     {
-      subCategory:"홍콩 | 마카오 | 심천",
-      subMenu:[
+      menu:[
         {
-          text:"가족테마 | 트레킹 | 모임여행",
-          link:"www.~.com"
-        },
+          subCategory:{
+            text:"대만(타이완)"
+          },
+          subMenu:[
+            {
+              text:"가족테마 | 온천 | 트레킹",
+              link:"www.~.com"
+            },
+            {
+              text:"택시투어 | 모임여행",
+              link:"www.~.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      menu:[
         {
-          text:"호캉스 | 역사문화유산",
-          link:"www.~.com"
+          subCategory:{
+            text:"홍콩 | 마카오 | 심천"
+          },
+          subMenu:[
+            {
+              text:"가족테마 | 트레킹 | 모임여행",
+              link:"www.~.com"
+            },
+            {
+              text:"호캉스 | 역사문화유산",
+              link:"www.~.com"
+            }
+          ]
         }
       ]
     }

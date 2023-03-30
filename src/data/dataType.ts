@@ -16,5 +16,20 @@ export type menuType = {
 }
 
 export type subMenuType = {
-  
-}
+  title?:string,
+  link?:string,
+  menu:{
+    subCategory:{
+      text:string,
+      link?:string
+    },
+    subMenu?:{
+      text:string,
+      link:string
+    }[],
+    advertisement?:{
+      text:string,
+      link?:string
+    }
+  }[]
+}[]

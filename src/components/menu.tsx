@@ -16,7 +16,6 @@ const Menu = ({idx}:MenuProps) => {
 }
 
 
-
 export default Menu
 
 

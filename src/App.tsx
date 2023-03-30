@@ -26,7 +26,7 @@ const App = () => {
 export default App;
 
 const AppSection = styled.section`
-  width:70%;
+  width:75%;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
