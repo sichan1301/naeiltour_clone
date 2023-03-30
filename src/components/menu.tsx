@@ -2,7 +2,7 @@ import { menu, submenu } from "../data/data"
 import styled from "styled-components"
 import { useState } from "react"
 import GoldMenu from "./subMenu/gold"
-import { EMenuType, EProductType } from "../data/dataType"
+import { EProductType } from "../data/dataType"
 import Package from "./subMenu/package"
 
 

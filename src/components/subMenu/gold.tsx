@@ -1,6 +1,5 @@
 import { menu, submenu } from "../../data/data"
 import styled from "styled-components"
-import { EMenuType, textLinkType } from "../../data/dataType"
 
 type subMenuProps = {
   productIdx:number,
@@ -8,12 +7,13 @@ type subMenuProps = {
 }
 
 const GoldMenu = ({productIdx,menuIdx}:subMenuProps) => {
-const filteredData = submenu.filter(item => item.type === EMenuType.gold)
-
   return(
     <GoldMenuSection>
       
-      {/* submenu[productIdx][menuIdx]  요딴식으로 하나 만들 것  */}
+      {submenu[productIdx][menuIdx].map(item => (<ul>
+        <SubCategory>{item.subCategory.text}</SubCategory>
+        {item.subMenu?.map(subMenu => <li>{subMenu.text}</li>)}
+      </ul>))}   
     </GoldMenuSection>
   )
 }

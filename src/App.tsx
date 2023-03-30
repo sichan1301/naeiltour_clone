@@ -9,7 +9,7 @@ const App = () => {
   const [productType, setProductType] = useState(0)
 
   const handleMouseEnter = (productIdx:number,productType:number) =>{
-    productIdx < 6 && setProductIdx(productIdx)
+    productIdx < 7 && setProductIdx(productIdx)
     setProductType(productType)
   }
 

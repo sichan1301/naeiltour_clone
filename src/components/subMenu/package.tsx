@@ -8,10 +8,13 @@ type subMenuProps = {
 }
 
 const Package = ({productIdx,menuIdx}:subMenuProps) => {
-
+  console.log(productIdx)
   return(
     <>
-      <h1>으어</h1>
+      {submenu[productIdx][0].map(item=>(<ul>
+        <SubCategory>{item.subCategory.text}</SubCategory>
+        {item.subMenu?.map(subMenu => <li>{subMenu.text}</li>)}  
+      </ul>))}
     </>
   )
 }

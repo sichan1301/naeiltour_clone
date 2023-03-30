@@ -19,28 +19,25 @@ export type menuType = {
 
 
 
-export type subMenuType = {
-  type:EMenuType,
-  Menu:{
-    subCategory:{
-      text:string,
-      link?:string
-    }[],
-    subMenu?:textLinkType[],
-    advertisement?:{
-      text:string,
-      link?:string
-    },
-  }[]
-}[]
+export type subMenuType = [
+  [
+    {
+      subCategory:{
+        text:string,
+        link?:string
+      },
+      subMenu?:textLinkType[],
+      advertisement?:{
+        text:string,
+        link?:string
+      },
+    }[]
+  ][]
+]
+
+
 
 export enum EProductType {
-  gold,
-  package,
-  information
-}
-
-export enum EMenuType {
   gold,
   package,
   information

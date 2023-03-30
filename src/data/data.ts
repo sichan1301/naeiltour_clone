@@ -1,4 +1,4 @@
-import { menuType, productType, subMenuType,EMenuType, EProductType } from "./dataType"
+import { menuType, productType, subMenuType,EProductType } from "./dataType"
 
 export const product:productType[] = [
   {
@@ -242,10 +242,11 @@ export const menu:menuType[] = [
 
 
 //  subMenu
-export const submenu:subMenuType = [
-  {
-    type:EMenuType.gold,
-    Menu:[
+export const submenu = [
+
+  // 금까기
+  [    
+    [
       {
         subCategory:{
           text:"서유럽"
@@ -357,16 +358,12 @@ export const submenu:subMenuType = [
           text:"아기자기한 유럽 소도시! 렌터카를 이용한 편안한 가출!"
         }
       },
-    ]
-  },
-
-  {
-    type:EMenuType.gold,
-    Menu:[
+    ],
+    [
       {
         subCategory:{
-        text:"도쿄",
-        link:"www.~.com"
+          text:"도쿄",
+          link:"www.~.com"
         },
         subMenu:[
           {
@@ -429,12 +426,8 @@ export const submenu:subMenuType = [
           link:"www.~.com"
         }
       },
-    ]
-  },
-
-  {
-    type:EMenuType.gold,
-    Menu:[
+    ],
+    [
       { 
         subCategory:{
           text:"베트남"
@@ -536,7 +529,7 @@ export const submenu:subMenuType = [
       },
       {
         subCategory:{
-          text:"인도네시아"
+          text:"인도네시아/말레이시아"
         },
         subMenu:[
           {
@@ -554,121 +547,440 @@ export const submenu:subMenuType = [
         ]
       },
     ]
-  }
+  ],
 
-  // [
-  //   {
-  //     subCategory:{
-  //       text:"유럽"
-  //     },
-  //     subMenu:[
-  //       {
-  //         text:"프리미엄 우리만",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"컴포트 우리만",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"테마 우리만",
-  //         link:"www.~.com"
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     subCategory: {
-  //       text:"일본"
-  //     },
-  //     subMenu:[
-  //       {
-  //         text:"도쿄 | 오사카 | 나고야",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"큐슈 | 홋카이도 | 오키나와 | 시코쿠",
-  //         link:"www.~.com"
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"괌 | 사이판 | 팔라우"
-  //     }
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"미주 | 캐나다 | 중남미"
-  //     }
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"호주 | 뉴질랜드",
-  //     }
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"동남아"
-  //     },
-  //     subMenu:[
-  //       {
-  //         text:"베트남 | 태국 | 미얀마 | 캄보디아",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"필리핀 | 싱가폴 | 말레이시아",
-  //         link:"www.~.com"
-  //       },          
-  //       {
-  //         text:"인도네시아",
-  //         link:"www.~.com"
-  //       }
-  //     ]
 
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"홍콩 | 마카오 | 대만"
-  //     }
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"대만(타이완)"
-  //     },
-  //     subMenu:[
-  //       {
-  //         text:"가족테마 | 온천 | 트레킹",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"택시투어 | 모임여행",
-  //         link:"www.~.com"
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     subCategory:{
-  //       text:"홍콩 | 마카오 | 심천"
-  //     },
-  //     subMenu:[
-  //       {
-  //         text:"가족테마 | 트레킹 | 모임여행",
-  //         link:"www.~.com"
-  //       },
-  //       {
-  //         text:"호캉스 | 역사문화유산",
-  //         link:"www.~.com"
-  //       }
-  //     ]
-  //   }
-  // ]
+  // 우리만
+  [
+    [
+      {
+        subCategory:{
+          text:"유럽"
+        },
+        subMenu:[
+          {
+            text:"프리미엄 우리만",
+            link:"www.~.com"
+          },
+          {
+            text:"컴포트 우리만",
+            link:"www.~.com"
+          },
+          {
+            text:"테마 우리만",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"일본"
+        },
+        subMenu:[
+          {
+            text:"도쿄 | 오사카 | 나고야",
+            link:"www.~.com"
+          },
+          {
+            text:"큐슈 | 홋카이도 | 오키나와 | 시코쿠",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"괌 | 사이판 | 팔라우"
+        }
+      },
+      {
+        subCategory:{
+          text:"미주 | 캐나다 | 중남미"
+        }
+      },
+      {
+        subCategory:{
+          text:"호주 | 뉴질랜드",
+        }
+      },
+      {
+        subCategory:{
+          text:"동남아"
+        },
+        subMenu:[
+          {
+            text:"베트남 | 태국 | 미얀마 | 캄보디아",
+            link:"www.~.com"
+          },
+          {
+            text:"필리핀 | 싱가폴 | 말레이시아",
+            link:"www.~.com"
+          },          
+          {
+            text:"인도네시아",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"홍콩 | 마카오 | 대만"
+        }
+      },
+      {
+        subCategory:{
+          text:"대만(타이완)"
+        },
+        subMenu:[
+          {
+            text:"가족테마 | 온천 | 트레킹",
+            link:"www.~.com"
+          },
+          {
+            text:"택시투어 | 모임여행",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"홍콩 | 마카오 | 심천"
+        },
+        subMenu:[
+          {
+            text:"가족테마 | 트레킹 | 모임여행",
+            link:"www.~.com"
+          },
+          {
+            text:"호캉스 | 역사문화유산",
+            link:"www.~.com"
+          }
+        ]
+      }
+    ] 
+  ],
+
+  // 특별한
+  [
+    [
+      {
+        subCategory:{
+          text:"서유럽"
+        },
+        subMenu:[
+          {
+            text:"이탈리아｜프랑스｜영국｜스위스｜독일｜네덜란드｜아이슬란드",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"동유럽/발칸"
+        },
+        subMenu:[
+          {
+            text:"체코｜오스트리아｜헝가리｜폴란드｜크로아티아｜슬로베니아",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"유럽 한나라 핵심일주"
+        }
+      },
+      {
+        subCategory:{
+          text:"유럽 자유여행 패키지"
+        }
+      },
+      {
+        subCategory:{
+          text:"스페인/포르투갈"
+        },
+        subMenu:[
+          {
+            text:"스페인｜포르투갈｜모로코",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"지중해/중동"
+        },
+        subMenu:[
+          {
+            text:"튀르키예(터키)｜그리스｜이집트｜두바이｜이스라엘",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"북유럽"
+        },
+        subMenu:[
+          {
+            text:"노르웨이｜핀란드｜스웨덴｜덴마크",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"일본 패키지"
+        },
+        subMenu:[
+          {
+            text:"도쿄 오사카 큐슈 북해도 오키나와",
+            link:"www.~.com"
+          }
+        ],
+        addEventListener:{
+          text:"내일이 설레이는 특별한 단체패키지 여행",
+          link:"www.~.com"
+        }
+      },
+    ]
+  ],
+
+
+  // 단체배낭
+  [
+    [
+      {
+        subCategory:{
+          text:"유 럽"
+        },
+        // addEventListener:{
+        //   text:"단체배낭(전문인솔자 동행)"
+        // },
+        subMenu:[
+          {
+            text:"전체 코스 보기(1 ~ 14코스)",
+            link:"www.~.com"
+          },
+          {
+            text:"지도로 보기",
+            link:"www.~.com"
+          },
+          {
+            text:"서유럽 | 동유럽 | 스페인",
+            link:"www.~.com"
+          },
+          {
+            text:"지중해 | 북유럽",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"미국 | 캐나다 | 중남미"
+        },
+        subMenu:[
+          {
+            text:"단체배낭(전문인솔자 동행)",
+            link:"www.~.com"
+          },
+          {
+            text:"호텔팩(자유롭게 마음대로)",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"호주 | 뉴질랜드"
+        },
+        subMenu:[
+          {
+            text:"단체배낭(전문인솔자 동행)",
+            link:"www.~.com"
+          },
+          {
+            text:"호텔팩(자유롭게 마음대로)",
+            link:"www.~.com"
+          }
+        ]
+      },
+    ]
+  ],
+
+  // 허니문
+  [
+    [
+      {
+        subCategory:{
+          text:"유럽 | 지중해"
+        },
+        subMenu:[
+          {
+            text:"유럽",
+            link:"www.~.com"
+          },
+          {
+            text:"지중해",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"남태평양"
+        },
+        subMenu:[
+          {
+            text:"호주",
+            link:"www.~.com"
+          },
+          {
+            text:"괌 | 사이판",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"미주 | 하와이 | 칸쿤"
+        },
+        subMenu:[
+          {
+            text:"하와이",
+            link:"www.~.com"
+          },
+          {
+            text:"미주 | 칸쿤",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"동남아"
+        },
+        subMenu:[
+          {
+            text:"발리 | 베트남",
+            link:"www.~.com"
+          },
+          {
+            text:"푸켓",
+            link:"www.~.com"
+          },
+          {
+            text:"크라비 | 코사무이",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"스페셜 휴양지"
+        },
+        subMenu:[
+          {
+            text:"자기야 탄생",
+            link:"www.~.com"
+          },
+          {
+            text:"자기야 BI",
+            link:"www.~.com"
+          },
+          {
+            text:"자기야 포인트",
+            link:"www.~.com"
+          },
+          {
+            text:"자기야 광고",
+            link:"www.~.com"
+          },
+          {
+            text:"자기야 캠페인",
+            link:"www.~.com"
+          },
+          {
+            text:"내일씨의 허니문",
+            link:"www.~.com"
+          }
+        ]
+      },
+    ]
+  ],
+
+
+  // 골프
+  [
+    [
+      {
+        subCategory:{
+          text:"괌 | 사이판 | 하와이"
+        },
+        subMenu:[
+          {
+            text:"괌 | 사이판 | 하와이",
+            link:"www.~.com"
+          },
+          {
+            text:"미주 | 칸쿤",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"동남아"
+        },
+        subMenu:[
+
+          {
+            text:"태국(방콕/파타야/치앙마이/푸켓)",
+            link:"www.~.com"
+          },
+          {
+            text:"베트남",
+            link:"www.~.com"
+          },
+          {
+            text:"필리핀/말레이시아",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"일본"
+        },
+        subMenu:[
+          {
+            text:"일본",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"테마골프"
+        },
+        subMenu:[
+
+          {
+            text:"해외골프 부킹",
+            link:"www.~.com"
+          },
+          {
+            text:"커플즈",
+            link:"www.~.com"
+          },
+          {
+            text:"나.비.가 골프",
+            link:"www.~.com"
+          }
+        ]
+      },
+    ]
+  ]
 ]
-
-
-
-
-
-
-
 
 
