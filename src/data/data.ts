@@ -1,4 +1,4 @@
-import { menuType, productType, subMenuType,EProductType } from "./dataType"
+import { menuType, productType, EProductType, subMenuType } from "./dataType"
 
 export const product:productType[] = [
   {
@@ -32,17 +32,17 @@ export const product:productType[] = [
     link:"www.~.com"
   },
   {
-    type:EProductType.information,
+    type:EProductType.airline,
     text:"실시간 할인항공",
     link:"www.~.com"
   },
   {
-    type:EProductType.information,
+    type:EProductType.etc,
     text:"전세계 호텔",
     link:"www.~.com"
   },
   {
-    type:EProductType.information,
+    type:EProductType.etc,
     text:"교통권&입장권 현지투어",
     link:"www.~.com"
   },
@@ -357,7 +357,7 @@ export const submenu = [
         advertisement:{
           text:"아기자기한 유럽 소도시! 렌터카를 이용한 편안한 가출!"
         }
-      },
+      }
     ],
     [
       {
@@ -425,7 +425,7 @@ export const submenu = [
           text:"오키나와",
           link:"www.~.com"
         }
-      },
+      }
     ],
     [
       { 
@@ -545,8 +545,232 @@ export const submenu = [
             link:"www.~.com"
           }
         ]
+      }
+    ],
+    [
+      { 
+        subCategory:{
+          text:"괌"
+        },
+        subMenu:[
+          {
+            text:"안심여행 괌",
+            link:"www.~.com"
+          },
+          {
+            text:"나.비.가 나는 비지니스타고 가출한다",
+            link:"www.~.com"
+          }
+        ]
       },
-    ]
+      { 
+        subCategory:{
+          text:"사이판"
+        },
+        subMenu:[
+          {
+            text:"안전한 힐링여행 사이판",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"인도양"
+        },
+        subMenu:[
+          {
+            text:"몰디브",
+            link:"www.~.com"
+          },
+          {
+            text:"모리셔스",
+            link:"www.~.com"
+          },
+          {
+            text:"세이셸",
+            link:"www.~.com"
+          }
+        ]
+      }
+    ],
+    [
+      { 
+        subCategory:{
+          text:"하와이"
+        },
+        subMenu:[
+          {
+            theme:"천국의 휴양지 하와이",
+            text:"오아후 | 호놀룰루 | 와이키키",
+            link:"www.~.com"
+          },
+          {
+            theme:"로맨틱 아일랜드 이웃섬",
+            text:"마우이 | 빅아일랜드 | 카우아이 | 라나이 | 하와이 + 미동서부",
+            link:"www.~.com"
+          }
+        ],
+        advertisement:{
+          text:"나.비.가 나는 비즈니스타고 가출한다",
+          link:"www.~.com"
+        }
+      },
+      { 
+        subCategory:{
+          text:"미국"
+        },
+        subMenu:[
+          {
+            theme:"미국 자유의 상징 미서부",
+            text:"로스앤젤레스 | 라스베가스 샌프란시스코 | 샌디에이고 디즈니랜드 | 그랜드캐년 시애틀 | 요세미티 | 알래스카",
+            link:"www.~.com"
+          },
+          {
+            theme:"로맨틱 아일랜드 이웃섬",
+            text:"마우이 | 빅아일랜드 | 카우아이 | 라나이 | 하와이 + 미동서부",
+            link:"www.~.com"
+          },
+          {
+            theme:"여심을 사로잡은 미동부",
+            text:"시카고 | 보스턴 | 워싱턴 올랜도 | 마이애미 |키웨스트",
+            link:"www.~.com"
+          }
+        ],
+      },
+      { 
+        subCategory:{
+          text:"캐나다"
+        },
+        subMenu:[
+          {
+            theme:"내 인생의 쉼표, 서부 캐나다",
+            text:"밴쿠버 | 빅토리아섬 | 휘슬러 | 레이크루이스 | 밴프 | 재스퍼 | 캘거리",
+            link:"www.~.com"
+          },
+          {
+            theme:"붉게 물든 단풍의 도시",
+            text:"토론토 | 나이아가라 | 퀘백 | 몬트리올 | 오타와 | 킹스턴 천섬 | 샬롯타운 빨강머리 앤",
+            link:"www.~.com"
+          },
+          {
+            theme:"캐나다 테마여행",
+            text:"오로라 옐로나이프 | 화이트 | 호스스키여행 | 단풍여행 | 기차여행 | 가이드 투어",
+            link:"www.~.com"
+          }
+        ],
+      },
+    ],
+    [
+      { 
+        subCategory:{
+          text:"호주"
+        },
+
+        subMenu:[
+          {
+            theme:"한 도시를 여유있고 꼼꼼하게",
+            text:"시드니｜멜번｜퍼스｜브리즈번｜골드코스트｜케언즈｜애들레이드",
+            link:"www.~.com"
+          },
+          {
+            theme:"두 도시를 효율적으로",
+            text:"시드니｜멜번｜퍼스｜브리즈번｜골드코스트｜케언즈｜애들레이드｜호바트｜해밀턴",
+            link:"www.~.com"
+          },
+          {
+            theme:"여심을 사로잡은 미동부",
+            text:"시카고 | 보스턴 | 워싱턴 올랜도 | 마이애미 |키웨스트",
+            link:"www.~.com"
+          },
+          {
+            theme:"세 도시를 완벽하게",
+            text:"시드니｜멜번｜퍼스｜브리즈번｜골드코스트｜케언즈｜애들레이드｜호바트｜해밀턴｜에어즈락｜퀸즈타운｜오클랜드",
+            link:"www.~.com"
+          },
+          {
+            theme:"여심을 사로잡은 미동부",
+            text:"시카고 | 보스턴 | 워싱턴 올랜도 | 마이애미 |키웨스트",
+            link:"www.~.com"
+          }
+          ],
+          advertisement:{
+            text:"나.비.가 나는 비즈니스타고 가출한다",
+            link:"www.~.com"
+          }
+        },
+        {
+          subCategory:{
+            text:"뉴질랜드"
+          },
+          subMenu:[
+            {
+              text:"퀸스타운｜크라이스트처치｜오클랜드｜로토루아｜더니든｜마운트 쿡",
+              link:"www.~.com"
+            },
+            {
+              text:"뉴질랜드 테마여행｜영화 '반지의 제왕' 촬영지｜프란츠요셉｜폭스빙하트레킹｜루트번｜통가리로 트레킹",
+              link:"www.~.com"
+            },
+          ]
+        },
+    ],
+    [
+      { 
+        subCategory:{
+          text:"대만"
+        },
+        subMenu:[
+          {
+            text:"타이페이 (가오슝｜예류｜지우펀｜화련)",
+            link:"www.~.com"
+          }
+        ]
+      },
+      { 
+        subCategory:{
+          text:"홍콩｜마카오｜심천"
+        },
+        subMenu:[
+          {
+            text:"기간별 (3일｜4일｜5일)",
+            link:"www.~.com"
+          },
+          {
+            text:"인기호텔별 (가족｜커플｜우정｜수영장)",
+            link:"www.~.com"
+          }
+        ]
+      },
+    ],
+    [
+      { 
+        subCategory:{
+          text:"니하오~! 중국"
+        },
+        subMenu:[
+          {
+            text:"상해｜북경",
+            link:"www.~.com"
+          },
+          {
+            text:"서안｜청도｜대련｜연태｜위해｜운남(곤명｜여강｜대리｜샹그릴라)｜계림｜양삭｜광주｜심천",
+            link:"www.~.com"
+          }
+        ]
+      },
+      { 
+        subCategory:{
+          text:"걸을수록 행복한 명산걷기"
+        },
+        subMenu:[
+          {
+            text:"장가계 | 황산 | 백두산 | 태산 | 노산 | 화산",
+            link:"www.~.com"
+          }
+        ]
+      },
+    ],
   ],
 
 
@@ -589,17 +813,17 @@ export const submenu = [
       },
       {
         subCategory:{
-          text:"괌 | 사이판 | 팔라우"
+          text:"괌｜사이판｜팔라우"
         }
       },
       {
         subCategory:{
-          text:"미주 | 캐나다 | 중남미"
+          text:"미주｜캐나다｜중남미"
         }
       },
       {
         subCategory:{
-          text:"호주 | 뉴질랜드",
+          text:"호주｜뉴질랜드",
         }
       },
       {
@@ -623,39 +847,21 @@ export const submenu = [
       },
       {
         subCategory:{
-          text:"홍콩 | 마카오 | 대만"
-        }
-      },
-      {
-        subCategory:{
-          text:"대만(타이완)"
+          text:"홍콩｜마카오｜대만"
         },
         subMenu:[
           {
-            text:"가족테마 | 온천 | 트레킹",
+            theme:"대만(타이완)",
+            text:"가족테마 | 온천 | 트레킹 | 택시투어 | 모임여행",
             link:"www.~.com"
           },
           {
-            text:"택시투어 | 모임여행",
+            theme:"홍콩 | 마카오 | 심천",
+            text:"가족테마 | 트레킹 | 모임여행 | 호캉스 | 역사문화유산",
             link:"www.~.com"
-          }
+          },
         ]
       },
-      {
-        subCategory:{
-          text:"홍콩 | 마카오 | 심천"
-        },
-        subMenu:[
-          {
-            text:"가족테마 | 트레킹 | 모임여행",
-            link:"www.~.com"
-          },
-          {
-            text:"호캉스 | 역사문화유산",
-            link:"www.~.com"
-          }
-        ]
-      }
     ] 
   ],
 
@@ -745,19 +951,16 @@ export const submenu = [
     ]
   ],
 
-
   // 단체배낭
   [
     [
       {
         subCategory:{
-          text:"유 럽"
+          text:"유럽"
         },
-        // addEventListener:{
-        //   text:"단체배낭(전문인솔자 동행)"
-        // },
         subMenu:[
           {
+            theme:"단체배낭(전문인솔자 동행)",
             text:"전체 코스 보기(1 ~ 14코스)",
             link:"www.~.com"
           },
@@ -777,7 +980,7 @@ export const submenu = [
       },
       {
         subCategory:{
-          text:"미국 | 캐나다 | 중남미"
+          text:"미주｜캐나다｜중남미"
         },
         subMenu:[
           {
@@ -792,7 +995,7 @@ export const submenu = [
       },
       {
         subCategory:{
-          text:"호주 | 뉴질랜드"
+          text:"호주｜뉴질랜드"
         },
         subMenu:[
           {
@@ -881,6 +1084,25 @@ export const submenu = [
         },
         subMenu:[
           {
+            text:"몰디브",
+            link:"www.~.com"
+          },
+          {
+            text:"모리셔스 | 세이셸",
+            link:"www.~.com"
+          },
+          {
+            text:"타히티",
+            link:"www.~.com"
+          }
+        ]
+      },
+      {
+        subCategory:{
+          text:"BRAND STORY"
+        },
+        subMenu:[
+          {
             text:"자기야 탄생",
             link:"www.~.com"
           },
@@ -909,13 +1131,12 @@ export const submenu = [
     ]
   ],
 
-
   // 골프
   [
     [
       {
         subCategory:{
-          text:"괌 | 사이판 | 하와이"
+          text:"괌/사이판/하와이"
         },
         subMenu:[
           {
@@ -933,7 +1154,6 @@ export const submenu = [
           text:"동남아"
         },
         subMenu:[
-
           {
             text:"태국(방콕/파타야/치앙마이/푸켓)",
             link:"www.~.com"
@@ -964,7 +1184,6 @@ export const submenu = [
           text:"테마골프"
         },
         subMenu:[
-
           {
             text:"해외골프 부킹",
             link:"www.~.com"
@@ -981,6 +1200,7 @@ export const submenu = [
       },
     ]
   ]
+
 ]
 
 

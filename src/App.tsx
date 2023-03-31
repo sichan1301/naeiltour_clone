@@ -9,14 +9,15 @@ const App = () => {
   const [productType, setProductType] = useState(0)
 
   const handleMouseEnter = (productIdx:number,productType:number) =>{
-    productIdx < 7 && setProductIdx(productIdx)
+    setProductIdx(productIdx)
     setProductType(productType)
   }
 
   return ( 
     <AppSection>
       <CategoryDiv>
-        {product.map((product,productIdx )=> <CategoryText onMouseEnter={() =>{handleMouseEnter(productIdx,product.type)}}><a href={product.link}>{product.text}</a></CategoryText>)}
+        {product.map((product,productIdx )=> <CategoryText onMouseEnter={() =>{handleMouseEnter(productIdx,product.type)}}><a href={product.link}>{product.text}</a></CategoryText>
+        )}
       </CategoryDiv>
       <Menu productIdx = {productIdx} productType ={productType}/>
     </AppSection>

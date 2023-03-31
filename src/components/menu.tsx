@@ -13,32 +13,54 @@ type MenuProps = {
 
 const Menu = ({productIdx,productType}:MenuProps) => {
   const [menuIdx,setMenuIdx] = useState(0)
+  const [menuCategory,setMenuCategory] = useState("")
 
-  const handleMouseEnter = (menuIdx:number) => {
-    menuIdx < 3 && setMenuIdx(menuIdx)
+  const handleMouseEnter = (menuIdx:number,menuCategory:string) => {
+    setMenuCategory(menuCategory)
+    setMenuIdx(menuIdx)
   }
+  const handleMouseLeave = () => {
+    setMenuCategory("")
+  }
+
+  const displayIdx = productType !== EProductType.etc ? productIdx : 0;
 
   return(
     <MenuSection>
       <>
-        <MenuNav>
-          <MenuTitle><a href={menu[productIdx].link}>{menu[productIdx].title}</a></MenuTitle> 
-          {menu[productIdx].menuCategory.map((item,menuIdx) => <MenuLi onMouseEnter={()=>handleMouseEnter(menuIdx)}><a href={item.link}>{item.text}</a></MenuLi>)}
+        <MenuNav>         
+          <MenuTitle><a href={menu[displayIdx].link}>{menu[displayIdx].title}</a></MenuTitle> 
+          {menu[displayIdx].menuCategory.map((item,menuIdx) => <MenuLi onMouseEnter={()=>handleMouseEnter(menuIdx,item.text)} onMouseLeave ={handleMouseLeave} isCategory = {menuCategory === item.text}><a href={item.link}>{item.text}</a></MenuLi>)}    
         </MenuNav>
 
-
-        {
+        {/* {
           submenu.map(item =>{
             switch(productType){
               case EProductType.gold:
                 return <GoldMenu productIdx = {productIdx} menuIdx = {menuIdx} />
               case EProductType.package:
-                return <Package productIdx = {productIdx} menuIdx = {menuIdx}/>
+                return <Package productIdx = {productIdx} menuCategory ={menuCategory}/> 
+              case EProductType.airline && EProductType.etc :
               default:
                 break;
             }
           })
+        } */}
+        
+        {
+
+      (() => {
+        switch (productType) {
+          case EProductType.gold:
+            return <GoldMenu  productIdx = {productIdx} menuIdx = {menuIdx}/>
+          case EProductType.package:
+            return <Package   productIdx = {productIdx} menuCategory ={menuCategory}/>
+
+          default:
+            return null
         }
+      })()}
+        
       </>
     </MenuSection>
   )
@@ -64,7 +86,13 @@ const MenuTitle = styled.p`
   font-size:30px;
 `
 
-const MenuLi = styled.li`
+interface ISubCategoryProps {
+  isCategory : boolean
+}
+
+const MenuLi = styled.li<ISubCategoryProps>`
+  color:${props=>props.isCategory && `orange`};
+  border-bottom: ${props => props.isCategory && `3px solid orange`};
   list-style: none;
   margin: 0 10px;
 `
